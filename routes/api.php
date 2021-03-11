@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
+use App\Models\MenuItem;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +18,22 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::prefix('/menu')->group(function () {
+    Route::get('/{amount}', function (Request $request, $amount) {
+        // create a random collection of unique items
+        // $menuItems = [];
+        // for($i = 0; $i<$amount;$i++){
+        //     MenuItem::get()->random()
+        // }
+        // return $menuItems;
+        return MenuItem::all();
+    }); 
+    Route::get('/sections', function () {
+        return MealType::all();
+    });
+    Route::get('/', function () {
+        return MenuItem::all();
+    }); 
 });
