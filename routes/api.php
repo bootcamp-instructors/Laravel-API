@@ -29,32 +29,37 @@ Route::group(['middleware' => ['auth:api']], function () {
 });
 
 // /api/menu/
-// TODO:
-    // get random menu section
-    // get menu item by id
-    // get menu item by id
-    // get menu item by section id and item id
 
+Route::get('/menu/section', function () {
+    // get all menu section types
+    return MealType::all()->random(1);
+});
 Route::get('/menu/sections', function () {
     // get all menu section types
     return MealType::all();
 });
-Route::get('/menu/items/{amount}', function (Request $request, $amount) {
-    // create a collection of unique items 
-    return MenuItem::with('mealType')->get()->random($amount);
-}); 
 Route::get('/menu/item', function () {
     // get one unique item
     return MenuItem::with('mealType')->get()->random(1);
-}); 
+});
+Route::get('/menu/items/{amount}', function (Request $request, $amount) {
+    // create a collection of unique items 
+    return MenuItem::with('mealType')->get()->random($amount);
+});
 Route::get('/menu/type/{type}', function (Request $request, $type) {
     // get 10 random meals of a specific type
     return MenuItem::with('mealType')->where("meal_type_id",$type)->get()->random(10);
-}); 
+});
 
+Route::get('/menu/type_amount/{type}/{amount}', function (Request $request, $type, $amount) {
+    // get 10 random meals of a specific type
+    if($amount <= 10){
+    return MenuItem::with('mealType')->where("meal_type_id",$type)->get()->random($amount);     
+    }
+    return "Request too large, try again with a smaller amount.";
+});
 
 // /api/store
-
 Route::get('/store/products', function () {
     // get all menu section types
     return Product::all();

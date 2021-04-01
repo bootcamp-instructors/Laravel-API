@@ -38,16 +38,24 @@
                                 Avaliable Routes:
                             </div>
                             <ul class="list-group text-gray-600 dark:text-gray-400" style="list-style-type:none;">
+
+                                <li class="list-group-item" style="font-size:1em;margin-left:-40px;">Menu Sections:</li>
+                                <li class="list-group-item" style='font-size:0.75em;'>get one random menu section type</li>
+                                <li class="list-group-item">GET <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/menu/section">/api/menu/section</a></li>
                                 <li class="list-group-item" style='font-size:0.75em;'>get all menu section types</li>
                                 <li class="list-group-item">GET <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/menu/sections">/api/menu/sections</a></li>
-                                <li class="list-group-item" style='font-size:0.75em;'>create a collection of unique menu items</li>
-                                <li class="list-group-item">GET <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/menu/items/42">/api/menu/items/{amount}</a></li>
+                                <br />
+                                <li class="list-group-item" style="font-size:1em;margin-left:-40px;">Menu Items:</li>
                                 <li class="list-group-item" style='font-size:0.75em;'>get one unique item</li>
                                 <li class="list-group-item">GET <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/menu/item">/api/menu/item</a></li>
+                                <li class="list-group-item" style='font-size:0.75em;'>create a collection of unique menu items</li>
+                                <li class="list-group-item">GET <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/menu/items/42">/api/menu/items/{amount}</a></li>
                                 <li class="list-group-item" style='font-size:0.75em;'>get 10 random menu items of a specific type</li>
                                 <li class="list-group-item">GET <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/menu/type/5">/api/menu/type/{type_id}</a></li>
+                                <li class="list-group-item" style='font-size:0.75em;'>get a specific amount of random menu items of a specific menu type</li>
+                                <li class="list-group-item">GET <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/menu/type_amount/5/2">/api/menu/type_amount/{type_id}/{amount_id}</a></li>
                             </ul>
-                            </div>
+                        </div>
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
                             <div class="flex items-center">
                                 <i class="fas fa-fish" style="color:white; font-size:1.5em;"></i>
