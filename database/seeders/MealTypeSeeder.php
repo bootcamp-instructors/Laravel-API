@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
 use App\Models\MealType;
+use Illuminate\Database\Seeder;
 
 class MealTypeSeeder extends Seeder
 {
@@ -14,7 +14,17 @@ class MealTypeSeeder extends Seeder
      */
     public function run()
     {
-        $types = ['breakfast', 'lunch', 'dinner', 'drinks', 'sides', 'desserts', 'appetizers', 'snacks'];
+        $types = [
+            'breakfast',
+            'snacks',
+            'lunch',
+            'appetizers',
+            'dinner',
+            'sides',
+            'desserts',
+            'drinks',
+            'sauces'
+        ];
         for($i = 0; $i<count($types);$i++){
             $mealType = new MealType;
             $mealType->type = $types[$i];

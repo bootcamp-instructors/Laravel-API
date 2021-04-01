@@ -4,6 +4,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 use App\Models\MenuItem;
+use App\Models\MealType;
+use App\Models\Product;
+use App\Models\Shipping;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,21 +22,51 @@ use App\Models\MenuItem;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::post('/register', [App\Http\Controllers\UsersController::class, 'register']);
 
-Route::prefix('/menu')->group(function () {
-    Route::get('/{amount}', function (Request $request, $amount) {
-        // create a random collection of unique items
-        // $menuItems = [];
-        // for($i = 0; $i<$amount;$i++){
-        //     MenuItem::get()->random()
-        // }
-        // return $menuItems;
-        return MenuItem::all();
-    }); 
-    Route::get('/sections', function () {
-        return MealType::all();
-    });
-    Route::get('/', function () {
-        return MenuItem::all();
-    }); 
+Route::group(['middleware' => ['auth:api']], function () {
+  Route::post('/logout', [App\Http\Controllers\UsersController::class, 'logout']);
+});
+
+// /api/menu/
+// TODO:
+    // get random menu section
+    // get menu item by id
+    // get menu item by id
+    // get menu item by section id and item id
+
+Route::get('/menu/sections', function () {
+    // get all menu section types
+    return MealType::all();
+});
+Route::get('/menu/items/{amount}', function (Request $request, $amount) {
+    // create a collection of unique items 
+    return MenuItem::with('mealType')->get()->random($amount);
+}); 
+Route::get('/menu/item', function () {
+    // get one unique item
+    return MenuItem::with('mealType')->get()->random(1);
+}); 
+Route::get('/menu/type/{type}', function (Request $request, $type) {
+    // get 10 random meals of a specific type
+    return MenuItem::with('mealType')->where("meal_type_id",$type)->get()->random(10);
+}); 
+
+
+
+// /api/store
+// TODO:
+    // get cart
+    // update cart
+    // purchase cart
+
+
+
+Route::get('/store/products', function () {
+    // get all menu section types
+    return Product::all();
+});
+Route::get('/store/shipping', function () {
+    // get all menu section types
+    return Shipping::all();
 });

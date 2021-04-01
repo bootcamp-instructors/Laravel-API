@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMenuItemsTable extends Migration
+class CreateUserCartsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateMenuItemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('menu_items', function (Blueprint $table) {
+        Schema::create('user_carts', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('description');
-            $table->unsignedBigInteger('meal_type_id');
-            $table->foreign('meal_type_id')->references('id')->on('meal_types');
+            $table->unsignedBigInteger('user_ref_id');
+            $table->foreign('user_ref_id')->references('id')->on('users');
+            $table->unsignedBigInteger('cart_ref_id');
+            $table->foreign('cart_ref_id')->references('id')->on('carts');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateMenuItemsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('menu_items');
+        Schema::dropIfExists('user_carts');
     }
 }

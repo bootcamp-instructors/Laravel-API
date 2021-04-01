@@ -5,18 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class MenuItem extends Model
+class CartProduct extends Model
 {
     use HasFactory;
-    protected $table = 'menu_items';
+    protected $table = 'cart_products';
     protected $primaryKey = 'id';
     public $incrementing = true;
     public $timestamps = true;
     protected $fillable = [
-      'name', 'meal_type_id', 'description'
+        'amount', 'product_ref_id', 'cart_ref_id'
     ];
-    public function mealType()
-    {
-        return $this->belongsTo(MealType::class);
-    }
 }
