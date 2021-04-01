@@ -53,14 +53,7 @@ Route::get('/menu/type/{type}', function (Request $request, $type) {
 }); 
 
 
-
 // /api/store
-// TODO:
-    // get cart
-    // update cart
-    // purchase cart
-
-
 
 Route::get('/store/products', function () {
     // get all menu section types
@@ -70,3 +63,8 @@ Route::get('/store/shipping', function () {
     // get all menu section types
     return Shipping::all();
 });
+
+// TODO:
+    // GET /store/cart
+    // POST /store/cart/update
+    // GET /store/cart/purchase

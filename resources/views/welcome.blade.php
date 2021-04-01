@@ -57,18 +57,15 @@
                                 Avaliable Routes:
                             </div>
                             <ul class="list-group text-gray-600 dark:text-gray-400" style="list-style-type:none;">
+                                <li class="list-group-item" style="font-size:1em;margin-left:-40px;">Path 1:</li>
                                 <li class="list-group-item" style='font-size:0.75em;'>get all store products</li>
                                 <li class="list-group-item">GET <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/store/products">/api/store/products</a></li>
+                                <br />
+                                <li class="list-group-item" style="font-size:1em;margin-left:-40px;">Path 2:</li>
                                 <li class="list-group-item" style='font-size:0.75em;'>get all shipping methods</li>
                                 <li class="list-group-item">GET <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/store/shipping">/api/store/shipping</a></li>
                                 <br />
-                                <li class="list-group-item" style='font-size:0.75em;'>get current user cart</li>
-                                <li class="list-group-item">GET <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/store/products">/api/store/user/{user_id}/cart/</a></li>
-                                <li class="list-group-item" style='font-size:0.75em;'>update user cart products</li>
-                                <li class="list-group-item">POST <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/store/shipping">/api/store/cart/1/update</a></li>
-                                <li class="list-group-item" style='font-size:0.75em;'>purhchase cart and get a new empty cart</li>
-                                <li class="list-group-item">POST <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/store/shipping">/api/store/shipping</a></li>
-                                <br />
+                                <li class="list-group-item" style="font-size:1em;margin-left:-40px;">Path 3:</li>
                                 <li class="list-group-item" style='font-size:0.75em;'>register a new user</li>
                                 <li class="list-group-item">POST <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/store/register">/api/register</a></li>
                                 <li class="list-group-item" style='font-size:0.75em;'>log in and recieve a user auth token</li>
@@ -77,6 +74,15 @@
                                 <li class="list-group-item">POST <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/logout">/api/logout</a></li>
                                 <li class="list-group-item" style='font-size:0.75em;'>get associated user data</li>
                                 <li class="list-group-item">GET <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/user">/api/user</a></li>
+                                <br />
+                                <li class="list-group-item" style='font-size:1em;margin-left:-40px;'>Final Goal (Requires all paths be complete)</li>
+                                <li class="list-group-item" style='font-size:0.75em;'>get current user cart</li>
+                                <li class="list-group-item">GET <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/store/cart">/api/store/cart</a></li>
+                                <li class="list-group-item" style='font-size:0.75em;'>update user cart products</li>
+                                <li class="list-group-item">POST <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/store/cart/update">/api/store/cart/update</a></li>
+                                <li class="list-group-item" style='font-size:0.75em;'>purchase cart and get a new empty cart</li>
+                                <li class="list-group-item">GET <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/store/cart/purchase">/api/store/cart/purchase</a></li>
+                                <br />
 <!-- 
                                
                                 <li class="list-group-item">POST <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/store/cart/1/update">/store/cart/{card_id}/update</a></li>
