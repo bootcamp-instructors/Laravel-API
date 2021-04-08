@@ -17,11 +17,12 @@ class DatabaseSeeder extends Seeder
             MealTypeSeeder::class,
             MenuItemSeeder::class,
             
-            UserSeeder::class,
 //             ShippingSeeder::class,
+//             ProductSeeder::class,
+            UserSeeder::class,
             CartSeeder::class,
             UserCartSeeder::class,
-//             ProductSeeder::class,
+
             CartProductSeeder::class
         ]);
     }

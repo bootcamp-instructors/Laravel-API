@@ -15,4 +15,8 @@ class Shipping extends Model
     protected $fillable = [
       'name', 'cost'
     ];
+     public function purchase()
+    {
+        return $this->belongsTo(Purchase::class);
+    }
 }

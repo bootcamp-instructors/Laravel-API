@@ -22,7 +22,6 @@ class CartFactory extends Factory
     public function definition()
     {
         return [
-            //
         ];
     }
 }

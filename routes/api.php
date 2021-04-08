@@ -26,6 +26,16 @@ Route::post('/register', [App\Http\Controllers\UsersController::class, 'register
 
 Route::group(['middleware' => ['auth:api']], function () {
   Route::post('/logout', [App\Http\Controllers\UsersController::class, 'logout']);
+
+// TODO:
+    // Protected with Auth:
+        // GET /store/cart
+        // POST /store/cart/update
+        // GET /store/cart/purchase
+//     Route:get('/store/cart', function () {
+//         // get all menu section types
+//         return Cart::with('user_cart', 'cart_product')->where("meal_type_id",$type)->latest()->first();
+//     });
 });
 
 // /api/menu/
@@ -47,14 +57,15 @@ Route::get('/menu/items/{amount}', function (Request $request, $amount) {
     return MenuItem::with('mealType')->get()->random($amount);
 });
 Route::get('/menu/type/{type}', function (Request $request, $type) {
+    // TODO: fail safely, use find instead of where
     // get 10 random meals of a specific type
     return MenuItem::with('mealType')->where("meal_type_id",$type)->get()->random(10);
 });
 
 Route::get('/menu/type_amount/{type}/{amount}', function (Request $request, $type, $amount) {
     // get 10 random meals of a specific type
-    if($amount <= 10){
-    return MenuItem::with('mealType')->where("meal_type_id",$type)->get()->random($amount);     
+    if($amount <= 10) {
+        return MenuItem::with('mealType')->where("meal_type_id",$type)->get()->random($amount);     
     }
     return "Request too large, try again with a smaller amount.";
 });
@@ -69,7 +80,3 @@ Route::get('/store/shipping', function () {
     return Shipping::all();
 });
 
-// TODO:
-    // GET /store/cart
-    // POST /store/cart/update
-    // GET /store/cart/purchase

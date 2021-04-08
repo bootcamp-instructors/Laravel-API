@@ -15,4 +15,16 @@ class UserCart extends Model
     protected $fillable = [
         'user_ref_id', 'cart_ref_id'
     ];
+    public function cart()
+    {
+        return $this->belongsTo(Cart::class);
+    }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+    public function purchase()
+    {
+        return $this->belongsTo(Purchase::class);
+    }
 }

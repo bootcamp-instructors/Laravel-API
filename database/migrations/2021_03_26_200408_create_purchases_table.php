@@ -15,10 +15,10 @@ class CreatePurchasesTable extends Migration
     {
         Schema::create('purchases', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_cart_ref_id');
-            $table->foreign('user_cart_ref_id')->references('id')->on('user_carts');
-            $table->unsignedBigInteger('shipping_ref_id');
-            $table->foreign('shipping_ref_id')->references('id')->on('shippings');
+            $table->unsignedBigInteger('user_cart_id');
+            $table->foreign('user_cart_id')->references('id')->on('user_carts');
+            $table->unsignedBigInteger('shipping_id');
+            $table->foreign('shipping_id')->references('id')->on('shippings');
             $table->timestamps();
         });
     }

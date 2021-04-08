@@ -22,7 +22,9 @@ class CartProductFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'amount' => 1,
+            'cart_ref_id' => 1,
+            'product_ref_id'=>1
         ];
     }
 }
