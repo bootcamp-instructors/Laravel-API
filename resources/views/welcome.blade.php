@@ -41,19 +41,19 @@
 
                                 <li class="list-group-item" style="font-size:1em;margin-left:-40px;">Menu Sections:</li>
                                 <li class="list-group-item" style='font-size:0.75em;'>get one random menu section type</li>
-                                <li class="list-group-item">GET <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/menu/section">/api/menu/section</a></li>
+                                <li class="list-group-item">GET <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/api/menu/section">/api/menu/section</a></li>
                                 <li class="list-group-item" style='font-size:0.75em;'>get all menu section types</li>
-                                <li class="list-group-item">GET <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/menu/sections">/api/menu/sections</a></li>
+                                <li class="list-group-item">GET <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/api/menu/sections">/api/menu/sections</a></li>
                                 <br />
                                 <li class="list-group-item" style="font-size:1em;margin-left:-40px;">Menu Items:</li>
                                 <li class="list-group-item" style='font-size:0.75em;'>get one unique item</li>
-                                <li class="list-group-item">GET <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/menu/item">/api/menu/item</a></li>
+                                <li class="list-group-item">GET <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/api/menu/item">/api/menu/item</a></li>
                                 <li class="list-group-item" style='font-size:0.75em;'>create a collection of unique menu items</li>
-                                <li class="list-group-item">GET <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/menu/items/42">/api/menu/items/{amount}</a></li>
+                                <li class="list-group-item">GET <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/api/menu/items/42">/api/menu/items/{amount}</a></li>
                                 <li class="list-group-item" style='font-size:0.75em;'>get 10 random menu items of a specific type</li>
-                                <li class="list-group-item">GET <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/menu/type/5">/api/menu/type/{type_id}</a></li>
+                                <li class="list-group-item">GET <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/api/menu/type/5">/api/menu/type/{type_id}</a></li>
                                 <li class="list-group-item" style='font-size:0.75em;'>get a specific amount of random menu items of a specific menu type</li>
-                                <li class="list-group-item">GET <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/menu/type_amount/5/2">/api/menu/type_amount/{type_id}/{amount_id}</a></li>
+                                <li class="list-group-item">GET <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/api/menu/type_amount/5/2">/api/menu/type_amount/{type_id}/{amount_id}</a></li>
                             </ul>
                         </div>
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
@@ -67,29 +67,29 @@
                             <ul class="list-group text-gray-600 dark:text-gray-400" style="list-style-type:none;">
                                 <li class="list-group-item" style="font-size:1em;margin-left:-40px;">Path 1:</li>
                                 <li class="list-group-item" style='font-size:0.75em;'>get all store products</li>
-                                <li class="list-group-item">GET <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/store/products">/api/store/products</a></li>
+                                <li class="list-group-item">GET <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/api/store/products">/api/store/products</a></li>
                                 <br />
                                 <li class="list-group-item" style="font-size:1em;margin-left:-40px;">Path 2:</li>
                                 <li class="list-group-item" style='font-size:0.75em;'>get all shipping methods</li>
-                                <li class="list-group-item">GET <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/store/shipping">/api/store/shipping</a></li>
+                                <li class="list-group-item">GET <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/api/store/shipping">/api/store/shipping</a></li>
                                 <br />
                                 <li class="list-group-item" style="font-size:1em;margin-left:-40px;">Path 3:</li>
                                 <li class="list-group-item" style='font-size:0.75em;'>register a new user</li>
-                                <li class="list-group-item">POST <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/store/register">/api/register</a></li>
+                                <li class="list-group-item">POST <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/api/store/register">/api/register</a></li>
                                 <li class="list-group-item" style='font-size:0.75em;'>log in and recieve a user auth token</li>
-                                <li class="list-group-item">POST <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/oauth/token">/api/oauth/token</a></li>
+                                <li class="list-group-item">POST <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/api/oauth/token">/api/oauth/token</a></li>
                                 <li class="list-group-item" style='font-size:0.75em;'>log a user out</li>
-                                <li class="list-group-item">POST <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/logout">/api/logout</a></li>
+                                <li class="list-group-item">POST <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/api/logout">/api/logout</a></li>
                                 <li class="list-group-item" style='font-size:0.75em;'>get associated user data</li>
-                                <li class="list-group-item">GET <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/user">/api/user</a></li>
+                                <li class="list-group-item">GET <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/api/user">/api/user</a></li>
                                 <br />
                                 <li class="list-group-item" style='font-size:1em;margin-left:-40px;'>Final Goal (Requires all paths be complete)</li>
                                 <li class="list-group-item" style='font-size:0.75em;'>get current user cart</li>
-                                <li class="list-group-item">GET <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/store/cart">/api/store/cart</a></li>
+                                <li class="list-group-item">GET <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/api/store/cart">/api/store/cart</a></li>
                                 <li class="list-group-item" style='font-size:0.75em;'>update user cart products</li>
-                                <li class="list-group-item">POST <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/store/cart/update">/api/store/cart/update</a></li>
+                                <li class="list-group-item">POST <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/api/store/cart/update">/api/store/cart/update</a></li>
                                 <li class="list-group-item" style='font-size:0.75em;'>purchase cart and get a new empty cart</li>
-                                <li class="list-group-item">GET <a class="underline"target="_blank" href="http://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/public/api/store/cart/purchase">/api/store/cart/purchase</a></li>
+                                <li class="list-group-item">GET <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com:3000/api/store/cart/purchase">/api/store/cart/purchase</a></li>
                                 <br />
 <!-- 
                                

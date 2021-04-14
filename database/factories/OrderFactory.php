@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\CartProduct;
+use App\Models\Order;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class CartProductFactory extends Factory
+class OrderFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = CartProduct::class;
+    protected $model = Order::class;
 
     /**
      * Define the model's default state.
@@ -22,9 +22,7 @@ class CartProductFactory extends Factory
     public function definition()
     {
         return [
-            'amount' => 1,
-            'cart_ref_id' => 1,
-            'product_ref_id'=>1
+            //
         ];
     }
 }
