@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\MealType;
 use Illuminate\Http\Request;
 
-class MealTypeController extends Controller
+class MealTypesController extends Controller
 {
     /**
      * Display a listing of the resource.

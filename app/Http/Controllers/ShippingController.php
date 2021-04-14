@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Shipping;
 use Illuminate\Http\Request;
 
-class ShippingController extends Controller
+class ShippingsController extends Controller
 {
     /**
      * Display a listing of the resource.

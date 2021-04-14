@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\MenuItem;
 use Illuminate\Http\Request;
 
-class MenuItemController extends Controller
+class MenuItemsController extends Controller
 {
     /**
      * Display a listing of the resource.
