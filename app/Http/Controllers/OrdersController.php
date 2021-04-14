@@ -25,7 +25,7 @@ class OrdersController extends Controller
     public function getByUserId(Request $request)
     {
         // get all menu section types
-        return Order::all->where('user_id', $$request->user->id)->latest()->first();
+        // return Order::all->where('user_id', $$request->user->id)->latest()->first();
     }
 
     /**

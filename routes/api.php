@@ -24,30 +24,16 @@ use App\Http\Controllers\OrdersController;
 |
 */
 
-Route::post('/register', [App\Http\Controllers\UsersController::class, 'register']);
+Route::prefix('auth')->group(function () {
+    Route::redirect('/login', '/oauth/token');
 
-Route::group(['middleware' => ['auth:api']], function () {
-    // gets user with all order data
-    Route::get('/user', [UsersController::class, 'index']);
-    // log out user
-    Route::post('/logout', [UsersController::class, 'logout']);
-    
-   
-        
-    Route::prefix('store')->group(function () {
-        // get all orders from user
-        Route::get('/orders', [OrdersController::class, 'index']);
-            
-        Route::prefix('order')->group(function () {
-            // gets current newest order from user
-            Route::get('/newest', [OrdersController::class, 'newest']);
-            // sets purchase date on current order and creates new empty order
-            Route::get('/place', [OrdersController::class, 'place']);
-            // updates the current purchases
-            Route::get('/update', [OrdersController::class, 'update']);
-            // gets specific newest order from user
-            Route::get('/{id}', [OrdersController::class, 'getById']);
-        });
+    Route::post('/register', [UsersController::class, 'register']);
+
+    Route::group(['middleware' => ['auth:api']], function () {
+        // gets user with all order data
+        Route::get('/user', [UsersController::class, 'index']);
+        // log out user
+        Route::post('/logout', [UsersController::class, 'logout']);
     });
 });
 
@@ -83,15 +69,28 @@ Route::prefix('menu')->group(function () {
     });
 });
 
+Route::prefix('store')->group(function () {
+    Route::get('/products', function () {
+        // get all menu section types
+        return Product::all();
+    });
+    Route::get('/shippings', function () {
+        // get all menu section types
+        return Shipping::all();
+    });
+    Route::group(['middleware' => ['auth:api']], function () {
+        // get all orders from user
+        Route::get('/orders', [OrdersController::class, 'index']);
 
-
-
-// /api/store
-Route::get('/store/products', function () {
-    // get all menu section types
-    return Product::all();
-});
-Route::get('/store/shippings', function () {
-    // get all menu section types
-    return Shipping::all();
+        Route::prefix('order')->group(function () {
+            // gets current newest order from user
+            Route::get('/newest', [OrdersController::class, 'newest']);
+            // sets purchase date on current order and creates new empty order
+            Route::get('/place', [OrdersController::class, 'place']);
+            // updates the current purchases
+            Route::get('/update', [OrdersController::class, 'update']);
+            // gets specific newest order from user
+            Route::get('/{id}', [OrdersController::class, 'getById']);
+        });
+     });
 });

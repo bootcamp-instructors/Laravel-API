@@ -75,13 +75,13 @@
                                 <br />
                                 <li class="list-group-item" style="font-size:1em;margin-left:-40px;">Path 3:</li>
                                 <li class="list-group-item" style='font-size:0.75em;'>register a new user</li>
-                                <li class="list-group-item">POST <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com/api/store/register">/api/register</a></li>
+                                <li class="list-group-item">POST <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com/api/auth/register">/api/auth/register</a></li>
                                 <li class="list-group-item" style='font-size:0.75em;'>log in and recieve a user auth token</li>
-                                <li class="list-group-item">POST <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com/api/oauth/token">/api/oauth/token</a></li>
+                                <li class="list-group-item">POST <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com/api/auth/login">/api/auth/login</a></li>
                                 <li class="list-group-item" style='font-size:0.75em;'>log a user out</li>
-                                <li class="list-group-item">POST <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com/api/logout">/api/logout</a></li>
+                                <li class="list-group-item">POST <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com/api/auth/logout">/api/auth/logout</a></li>
                                 <li class="list-group-item" style='font-size:0.75em;'>get associated user data</li>
-                                <li class="list-group-item">GET <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com/api/user">/api/user</a></li>
+                                <li class="list-group-item">GET <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com/api/auth/user">/api/auth/user</a></li>
                                 <br />
                                 <li class="list-group-item" style='font-size:1em;margin-left:-40px;'>Final Goal (Requires all paths be complete)</li>
                                 <li class="list-group-item" style='font-size:0.75em;'>get current user cart</li>
