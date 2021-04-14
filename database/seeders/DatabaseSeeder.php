@@ -16,14 +16,11 @@ class DatabaseSeeder extends Seeder
         $this->call([
             MealTypeSeeder::class,
             MenuItemSeeder::class,
-            
-//             ShippingSeeder::class,
-//             ProductSeeder::class,
-            UserSeeder::class,
-            CartSeeder::class,
-            UserCartSeeder::class,
-
-            CartProductSeeder::class
+            UserSeeder::class
+            // ProductSeeder::class,
+            // PurchaseSeeder::class,
+            // ShippingSeeder::class,
+            // OrderSeeder::class,
         ]);
     }
 }

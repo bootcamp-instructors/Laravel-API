@@ -13,15 +13,14 @@ class Purchase extends Model
     public $incrementing = true;
     public $timestamps = true;
     protected $fillable = [
-      'user_cart_ref_id', 'shipping_ref_id'
+      'amount', 'product_id', 'order_id'
     ];
-    
-    public function shipping()
+    public function order()
     {
-        return $this->hasOne(Shipping::class, 'shipping_ref_id', 'id');
+        return $this->belongsTo(Order::class);
     }
-    public function user_cart()
+    public function product()
     {
-        return $this->hasOne(UserCart::class, 'user_cart_ref_id', 'id');
+        return $this->hasOne(Product::class);
     }
 }

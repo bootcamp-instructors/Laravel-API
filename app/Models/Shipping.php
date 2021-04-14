@@ -15,8 +15,8 @@ class Shipping extends Model
     protected $fillable = [
       'name', 'cost'
     ];
-     public function purchase()
+    public function order()
     {
-        return $this->belongsTo(Purchase::class);
+        return $this->belongsTo(Order::class);
     }
 }

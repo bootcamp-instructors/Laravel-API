@@ -15,9 +15,8 @@ class Product extends Model
     protected $fillable = [
       'name', 'description', 'price', 'type'
     ];
-    
-    public function cart_product()
+    public function purchase()
     {
-        return $this->belongsTo(CartProduct::class, 'product_ref_id');
+        return $this->belongsTo(Purchase::class);
     }
 }
