@@ -19,7 +19,7 @@ class CreateOrdersTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('shipping_id');
             $table->foreign('shipping_id')->references('id')->on('shippings');
-            $table->timestamp('order_placed_at');
+            $table->timestamp('order_placed_at')->nullable();
             $table->timestamps();
         });
     }

@@ -9,8 +9,11 @@ use Illuminate\Support\Facades\Validator;
 
 class UsersController extends Controller
 {
-    public function register(Request $request)
-    {
+    public function index(Request $request){
+        return $request->user();   
+    }
+    
+    public function register(Request $request){
         $validator = Validator::make($request->all(), [
             'email' => 'nullable|email|max:64',
             'password' => 'required|string',

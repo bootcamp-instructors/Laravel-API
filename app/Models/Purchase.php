@@ -1,4 +1,4 @@
-<?php
+v<?php
 
 namespace App\Models;
 
@@ -14,6 +14,9 @@ class Purchase extends Model
     public $timestamps = true;
     protected $fillable = [
       'amount', 'product_id', 'order_id'
+    ];
+    protected $with = [
+      'product'  
     ];
     public function order()
     {

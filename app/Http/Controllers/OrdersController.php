@@ -16,6 +16,17 @@ class OrdersController extends Controller
     {
         //
     }
+    
+    /**
+     * Display a listing of the resource by user_id.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getByUserId(Request $request)
+    {
+        // get all menu section types
+        return Order::all->where('user_id', $$request->user->id)->latest()->first();
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -70,6 +81,19 @@ class OrdersController extends Controller
     public function update(Request $request, Order $order)
     {
         //
+    }
+    
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Order  $order
+     * @return \Illuminate\Http\Response
+     */
+    public function purchase(Request $request, Order $order)
+    {
+        //
+        $now = now();
     }
 
     /**

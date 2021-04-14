@@ -15,16 +15,20 @@ class Order extends Model
     protected $fillable = [
         'order_placed_at', 'shipping_id', 'user_id'
     ];
+    protected $with = [
+      'shipping', 'purchases'  
+    ];
     public function user()
     {
         return $this->belongsTo(User::class);
-    }
-    public function purchases()
-    {
-        return $this->hasMany(Purchase::class);
     }
     public function shipping()
     {
         return $this->hasOne(Shipping::class);
     }
+    public function purchases()
+    {
+        return $this->hasMany(Purchase::class);
+    }
+   
 }
