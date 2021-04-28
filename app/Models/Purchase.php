@@ -8,10 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Purchase extends Model
 {
     use HasFactory;
+   
     protected $table = 'purchases';
     protected $primaryKey = 'id';
     public $incrementing = true;
     public $timestamps = true;
+    
     protected $fillable = [
       'amount', 'product_id', 'order_id'
     ];

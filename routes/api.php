@@ -7,8 +7,8 @@ use App\Models\MenuItem;
 use App\Models\MealType;
 use App\Models\Product;
 use App\Models\Shipping;
-use App\Http\Controllers\UsersController;
-use App\Http\Controllers\OrdersController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\OrderController;
 
 // need to make sure this change is reflected locally
 
@@ -25,15 +25,14 @@ use App\Http\Controllers\OrdersController;
 */
 
 Route::prefix('auth')->group(function () {
-    Route::redirect('/login', '/oauth/token');
 
-    Route::post('/register', [UsersController::class, 'register']);
+    Route::post('/register', [UserController::class, 'register']);
 
     Route::group(['middleware' => ['auth:api']], function () {
         // gets user with all order data
-        Route::get('/user', [UsersController::class, 'index']);
+        Route::get('/user', [UserController::class, 'index']);
         // log out user
-        Route::post('/logout', [UsersController::class, 'logout']);
+        Route::get('/logout', [UserController::class, 'logout']);
     });
 });
 
@@ -80,17 +79,17 @@ Route::prefix('store')->group(function () {
     });
     Route::group(['middleware' => ['auth:api']], function () {
         // get all orders from user
-        Route::get('/orders', [OrdersController::class, 'index']);
+        Route::get('/orders', [OrderController::class, 'index']);
 
         Route::prefix('order')->group(function () {
             // gets current newest order from user
-            Route::get('/newest', [OrdersController::class, 'newest']);
+            Route::get('/newest', [OrderController::class, 'newest']);
             // sets purchase date on current order and creates new empty order
-            Route::get('/place', [OrdersController::class, 'place']);
+            Route::get('/place', [OrderController::class, 'place']);
             // updates the current purchases
-            Route::get('/update', [OrdersController::class, 'update']);
+            Route::get('/update', [OrderController::class, 'update']);
             // gets specific newest order from user
-            Route::get('/{id}', [OrdersController::class, 'getById']);
+            Route::get('/{id}', [OrderController::class, 'getById']);
         });
      });
 });

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\MealType;
+use App\Models\Shipping;
 use Illuminate\Http\Request;
 
-class MealTypesController extends Controller
+class ShippingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class MealTypesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\MealType  $mealType
+     * @param  \App\Models\Shipping  $shipping
      * @return \Illuminate\Http\Response
      */
-    public function show(MealType $mealType)
+    public function show(Shipping $shipping)
     {
         //
     }
@@ -52,10 +52,10 @@ class MealTypesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\MealType  $mealType
+     * @param  \App\Models\Shipping  $shipping
      * @return \Illuminate\Http\Response
      */
-    public function edit(MealType $mealType)
+    public function edit(Shipping $shipping)
     {
         //
     }
@@ -64,10 +64,10 @@ class MealTypesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\MealType  $mealType
+     * @param  \App\Models\Shipping  $shipping
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, MealType $mealType)
+    public function update(Request $request, Shipping $shipping)
     {
         //
     }
@@ -75,10 +75,10 @@ class MealTypesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\MealType  $mealType
+     * @param  \App\Models\Shipping  $shipping
      * @return \Illuminate\Http\Response
      */
-    public function destroy(MealType $mealType)
+    public function destroy(Shipping $shipping)
     {
         //
     }

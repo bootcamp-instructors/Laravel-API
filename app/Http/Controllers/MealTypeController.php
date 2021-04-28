@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Purchase;
+use App\Models\MealType;
 use Illuminate\Http\Request;
 
-class PurchasesController extends Controller
+class MealTypeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class PurchasesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Purchase  $purchase
+     * @param  \App\Models\MealType  $mealType
      * @return \Illuminate\Http\Response
      */
-    public function show(Purchase $purchase)
+    public function show(MealType $mealType)
     {
         //
     }
@@ -52,10 +52,10 @@ class PurchasesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Purchase  $purchase
+     * @param  \App\Models\MealType  $mealType
      * @return \Illuminate\Http\Response
      */
-    public function edit(Purchase $purchase)
+    public function edit(MealType $mealType)
     {
         //
     }
@@ -64,10 +64,10 @@ class PurchasesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Purchase  $purchase
+     * @param  \App\Models\MealType  $mealType
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Purchase $purchase)
+    public function update(Request $request, MealType $mealType)
     {
         //
     }
@@ -75,10 +75,10 @@ class PurchasesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Purchase  $purchase
+     * @param  \App\Models\MealType  $mealType
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Purchase $purchase)
+    public function destroy(MealType $mealType)
     {
         //
     }

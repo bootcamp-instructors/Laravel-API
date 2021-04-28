@@ -77,7 +77,7 @@
                                 <li class="list-group-item" style='font-size:0.75em;'>register a new user</li>
                                 <li class="list-group-item">POST <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com/api/auth/register">/api/auth/register</a></li>
                                 <li class="list-group-item" style='font-size:0.75em;'>log in and recieve a user auth token</li>
-                                <li class="list-group-item">POST <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com/api/auth/login">/api/auth/login</a></li>
+                                <li class="list-group-item">POST <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com/oauth/token">/oauth/token</a></li>
                                 <li class="list-group-item" style='font-size:0.75em;'>log a user out</li>
                                 <li class="list-group-item">POST <a class="underline"target="_blank" href="https://awesomeincbootcampapi-ianrios529550.codeanyapp.com/api/auth/logout">/api/auth/logout</a></li>
                                 <li class="list-group-item" style='font-size:0.75em;'>get associated user data</li>

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Shipping;
+use App\Models\MenuItem;
 use Illuminate\Http\Request;
 
-class ShippingsController extends Controller
+class MenuItemController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class ShippingsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Shipping  $shipping
+     * @param  \App\Models\MenuItem  $menuItem
      * @return \Illuminate\Http\Response
      */
-    public function show(Shipping $shipping)
+    public function show(MenuItem $menuItem)
     {
         //
     }
@@ -52,10 +52,10 @@ class ShippingsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Shipping  $shipping
+     * @param  \App\Models\MenuItem  $menuItem
      * @return \Illuminate\Http\Response
      */
-    public function edit(Shipping $shipping)
+    public function edit(MenuItem $menuItem)
     {
         //
     }
@@ -64,10 +64,10 @@ class ShippingsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Shipping  $shipping
+     * @param  \App\Models\MenuItem  $menuItem
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Shipping $shipping)
+    public function update(Request $request, MenuItem $menuItem)
     {
         //
     }
@@ -75,10 +75,10 @@ class ShippingsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Shipping  $shipping
+     * @param  \App\Models\MenuItem  $menuItem
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Shipping $shipping)
+    public function destroy(MenuItem $menuItem)
     {
         //
     }

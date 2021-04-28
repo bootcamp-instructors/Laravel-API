@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Order;
+use App\Models\Purchase;
 use Illuminate\Http\Request;
 
-class OrdersController extends Controller
+class PurchaseController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,17 +15,6 @@ class OrdersController extends Controller
     public function index()
     {
         //
-    }
-    
-    /**
-     * Display a listing of the resource by user_id.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function getByUserId(Request $request)
-    {
-        // get all menu section types
-        // return Order::all->where('user_id', $$request->user->id)->latest()->first();
     }
 
     /**
@@ -52,10 +41,10 @@ class OrdersController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Order  $order
+     * @param  \App\Models\Purchase  $purchase
      * @return \Illuminate\Http\Response
      */
-    public function show(Order $order)
+    public function show(Purchase $purchase)
     {
         //
     }
@@ -63,10 +52,10 @@ class OrdersController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Order  $order
+     * @param  \App\Models\Purchase  $purchase
      * @return \Illuminate\Http\Response
      */
-    public function edit(Order $order)
+    public function edit(Purchase $purchase)
     {
         //
     }
@@ -75,34 +64,21 @@ class OrdersController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Order  $order
+     * @param  \App\Models\Purchase  $purchase
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Order $order)
+    public function update(Request $request, Purchase $purchase)
     {
         //
-    }
-    
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Order  $order
-     * @return \Illuminate\Http\Response
-     */
-    public function purchase(Request $request, Order $order)
-    {
-        //
-        $now = now();
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Order  $order
+     * @param  \App\Models\Purchase  $purchase
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Order $order)
+    public function destroy(Purchase $purchase)
     {
         //
     }

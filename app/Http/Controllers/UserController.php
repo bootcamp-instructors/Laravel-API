@@ -6,8 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
 
-class UsersController extends Controller
+class UserController extends Controller
 {
     public function index(Request $request){
         return $request->user();   
@@ -38,7 +39,7 @@ class UsersController extends Controller
         if (Auth::check()) {
             Auth::user()->token()->revoke();
             return response()->json(['success' =>'logout_success'],200); 
-        }else{
+        } else {
             return response()->json(['error' =>'api.something_went_wrong'], 500);
         }
     }
