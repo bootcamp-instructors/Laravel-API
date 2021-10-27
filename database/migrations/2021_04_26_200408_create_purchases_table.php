@@ -16,10 +16,8 @@ class CreatePurchasesTable extends Migration
         Schema::create('purchases', function (Blueprint $table) {
             $table->id();
             $table->integer('amount');
-            $table->unsignedBigInteger('product_id');
-            $table->foreign('product_id')->references('id')->on('products');
-            $table->unsignedBigInteger('order_id');
-            $table->foreign('order_id')->references('id')->on('orders');
+            $table->foreignId('product_id')->constrained('products');
+            $table->foreignId('order_id')->constrained('orders');
             $table->timestamps();
         });
     }

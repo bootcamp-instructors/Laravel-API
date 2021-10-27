@@ -25,12 +25,15 @@ use App\Http\Controllers\OrderController;
 */
 
 Route::prefix('auth')->group(function () {
+    // current passport key: o8qQJZMxvG1a2n6XpFc06AeZLwlhQt8nFBhdFBuB
 
     Route::post('/register', [UserController::class, 'register']);
+    // log in user
+    Route::post('/login', [UserController::class, 'signin']);
 
     Route::group(['middleware' => ['auth:api']], function () {
         // gets user with all order data
-        Route::get('/user', [UserController::class, 'index']);
+        Route::get('/user', [UserController::class, 'userData']);
         // log out user
         Route::get('/logout', [UserController::class, 'logout']);
     });
@@ -38,8 +41,8 @@ Route::prefix('auth')->group(function () {
 
 Route::prefix('menu')->group(function () {
     Route::get('/section', function () {
-    // get all menu section types
-    return MealType::all()->random(1);
+        // get all menu section types
+        return MealType::all()->random(1);
     });
     Route::get('/sections', function () {
         // get all menu section types
@@ -50,19 +53,19 @@ Route::prefix('menu')->group(function () {
         return MenuItem::with('mealType')->get()->random(1);
     });
     Route::get('/items/{amount}', function (Request $request, $amount) {
-        // create a collection of unique items 
+        // create a collection of unique items
         return MenuItem::with('mealType')->get()->random($amount);
     });
     Route::get('/type/{type}', function (Request $request, $type) {
         // TODO: fail safely, use find instead of where
         // get 10 random meals of a specific type
-        return MenuItem::with('mealType')->where("meal_type_id",$type)->get()->random(10);
+        return MenuItem::with('mealType')->where("meal_type_id", $type)->get()->random(10);
     });
 
     Route::get('/type_amount/{type}/{amount}', function (Request $request, $type, $amount) {
         // get 10 random meals of a specific type
-        if($amount <= 10) {
-            return MenuItem::with('mealType')->where("meal_type_id",$type)->get()->random($amount);     
+        if ($amount <= 10) {
+            return MenuItem::with('mealType')->where("meal_type_id", $type)->get()->random($amount);
         }
         return "Request too large, try again with a smaller amount.";
     });
@@ -79,17 +82,19 @@ Route::prefix('store')->group(function () {
     });
     Route::group(['middleware' => ['auth:api']], function () {
         // get all orders from user
-        Route::get('/orders', [OrderController::class, 'index']);
+        Route::get('/orders', [OrderController::class, 'getUsersOrders']);
 
         Route::prefix('order')->group(function () {
-            // gets current newest order from user
-            Route::get('/newest', [OrderController::class, 'newest']);
-            // sets purchase date on current order and creates new empty order
-            Route::get('/place', [OrderController::class, 'place']);
+            // gets current card from user or creates one if empty order does not exist
+            Route::get('/current', [OrderController::class, 'current']);
+
             // updates the current purchases
             Route::get('/update', [OrderController::class, 'update']);
-            // gets specific newest order from user
-            Route::get('/{id}', [OrderController::class, 'getById']);
+
+            // sets purchase date on current order and creates new empty order
+            Route::get('/place', [OrderController::class, 'place']);
         });
-     });
+    });
+
+    Route::get('/allorders', [OrderController::class, 'index']);
 });

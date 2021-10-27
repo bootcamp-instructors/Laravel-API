@@ -12,22 +12,23 @@ class ProductSeeder extends Seeder
      *
      * @return void
      */
-    
-    public function weightedRand($min, $max, $weightedMax) {
+
+    public function weightedRand($min, $max, $weightedMax)
+    {
         $arr = array();
-        for($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 10; $i++) {
             $arr[] = rand($min, $weightedMax);
         }
         $arr[] = rand($min, $max);
-        return $arr[rand(0,10)];
+        return $arr[rand(0, 10)];
     }
-    
+
     public function run()
     {
         $faker = \Faker\Factory::create();
 
         $tools = [
-            "Whopper Plopper", 
+            "Whopper Plopper",
             "Spin Jig",
             "Jiggin' Spoon",
             'Big Fishing Pole',
@@ -48,7 +49,7 @@ class ProductSeeder extends Seeder
             'Bass Boat Xtreme',
             'Gun'
         ];
-        for($i = 0; $i<count($tools);$i++){
+        for ($i = 0; $i < count($tools); $i++) {
             $product = new Product;
             $product->name = $tools[$i];
             $number = $faker->numberBetween($min = 5, $max = 30);
@@ -56,11 +57,12 @@ class ProductSeeder extends Seeder
             // $product->price = $faker->randomFloat($nbMaxDecimals = 2, $min = 30, $max = 5000);
             $product->price = $faker->biasedNumberBetween($min = 30, $max = 500, $function = 'Faker\Provider\Biased::linearLow');
             $product->type = 'tool';
+            $product->image = $faker->imageUrl(800, 600, 'tool');
             $product->save();
         }
-        
+
         $accessories = [
-           
+
             'Live Crickets',
             'Slimy Worms',
             'Not So Slimy Worms',
@@ -94,14 +96,15 @@ class ProductSeeder extends Seeder
             'Camo Hat with Orange Brim',
             'Kentucky Smallmouth Bass (pre fished, on ice)'
         ];
-        for($i = 0; $i<count($accessories);$i++){
+        for ($i = 0; $i < count($accessories); $i++) {
             $product = new Product;
             $product->name = $accessories[$i];
             $number = $faker->numberBetween($min = 5, $max = 30);
             $product->description = $faker->sentence($nbWords = $number, $variableNbWords = false);
-            // $product->price = $faker->randomFloat($nbMaxDecimals = 2, $min = 1, $max = 200); 
+            // $product->price = $faker->randomFloat($nbMaxDecimals = 2, $min = 1, $max = 200);
             $product->price = $faker->biasedNumberBetween($min = 1, $max = 200, $function = 'Faker\Provider\Biased::linearLow');
             $product->type = 'accessory';
+            $product->image = $faker->imageUrl(800, 600, 'fish');
             $product->save();
         }
     }

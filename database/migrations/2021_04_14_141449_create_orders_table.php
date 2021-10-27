@@ -15,10 +15,8 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->unsignedBigInteger('shipping_id');
-            $table->foreign('shipping_id')->references('id')->on('shippings');
+            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('shipping_id')->constrained('shippings');
             $table->timestamp('order_placed_at')->nullable();
             $table->timestamps();
         });

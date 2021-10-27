@@ -13,7 +13,7 @@ class Product extends Model
     public $incrementing = true;
     public $timestamps = true;
     protected $fillable = [
-      'name', 'description', 'price', 'type'
+      'name', 'description', 'price', 'type', 'image'
     ];
     public function purchase()
     {

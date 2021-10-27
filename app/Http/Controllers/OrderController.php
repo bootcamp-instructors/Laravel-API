@@ -14,18 +14,29 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        return Order::all();
     }
-    
+
     /**
      * Display a listing of the resource by user_id.
      *
      * @return \Illuminate\Http\Response
      */
-    public function getByUserId(Request $request)
+    public function getUsersOrders(Request $request)
     {
-        // get all menu section types
-        // return Order::all->where('user_id', $$request->user->id)->latest()->first();
+        // get all orders from a specific user
+        return Order::where('user_id', $request->user()->id)->get();
+    }
+
+    public function current(Request $request)
+    {
+        $id = $request->user()->id;
+        $currentOrder = Order::where('user_id', $id)->where('order_placed_at', null)->get();
+        if (count($currentOrder) == 0) {
+            $order = $this->create($id);
+            $currentOrder = Order::find($order->id)->get();
+        }
+        return $currentOrder;
     }
 
     /**
@@ -33,9 +44,17 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($user_id)
     {
-        //
+        $order = new Order;
+
+        $order->order_placed_at = null;
+        $order->shipping_id = 2; // all orders are set to have the second shipping option as default
+        $order->user_id = $user_id;
+
+        $order->save();
+
+        return $order;
     }
 
     /**
@@ -82,18 +101,20 @@ class OrderController extends Controller
     {
         //
     }
-    
+
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function purchase(Request $request, Order $order)
+    public function purchase(Request $request)
     {
-        //
-        $now = now();
+        $order = Order::find($request->order_id)->get();
+        $order->order_placed_at = now();
+        $order->shipping_id = $request->shipping_id;
+        $order->save();
+        return "Order Created";
     }
 
     /**

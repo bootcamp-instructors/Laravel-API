@@ -16,7 +16,7 @@ class Order extends Model
         'order_placed_at', 'shipping_id', 'user_id'
     ];
     protected $with = [
-      'shipping', 'purchases'  
+      'shipping', 'purchases'
     ];
     public function user()
     {
@@ -24,11 +24,11 @@ class Order extends Model
     }
     public function shipping()
     {
-        return $this->hasOne(Shipping::class);
+        return $this->hasOne(Shipping::class, 'id', 'shipping_id');
     }
     public function purchases()
     {
         return $this->hasMany(Purchase::class);
     }
-   
+
 }

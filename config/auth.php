@@ -18,6 +18,7 @@ return [
         'passwords' => 'users',
     ],
 
+
     /*
     |--------------------------------------------------------------------------
     | Authentication Guards
@@ -44,7 +45,9 @@ return [
         'api' => [
             'driver' => 'passport',
             'provider' => 'users',
+            'hash' => false,
         ],
+        // 'clientapi' => ['driver' => 'passport', 'provider' => 'client',],
     ],
 
     /*
@@ -70,10 +73,10 @@ return [
             'model' => App\Models\User::class,
         ],
 
-//         'users' => [
-//             'driver' => 'database',
-//             'table' => 'users',
-//         ],
+        //         'users' => [
+        //             'driver' => 'database',
+        //             'table' => 'users',
+        //         ],
     ],
 
     /*
