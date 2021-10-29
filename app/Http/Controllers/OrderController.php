@@ -14,7 +14,8 @@ class OrderController extends Controller
      */
     public function index()
     {
-        return Order::all();
+        $orders Order::all();
+        return response(['data' => $orders, 'message' => 'All site Orders found successfully!', 'status' => true]);
     }
 
     /**
@@ -25,7 +26,8 @@ class OrderController extends Controller
     public function getUsersOrders(Request $request)
     {
         // get all orders from a specific user
-        return Order::where('user_id', $request->user()->id)->get();
+        $usersOrders =  Order::where('user_id', $request->user()->id)->get();
+        return response(['data' => $usersOrders, 'message' => 'Users Orders found successfully!', 'status' => true]);
     }
 
     public function current(Request $request)
@@ -36,7 +38,7 @@ class OrderController extends Controller
             $order = $this->create($id);
             $currentOrder = Order::find($order->id)->get();
         }
-        return $currentOrder;
+        return response(['data' => $currentOrder, 'message' => 'Current Order found successfully!', 'status' => true]);
     }
 
     /**
@@ -113,8 +115,13 @@ class OrderController extends Controller
         $order = Order::find($request->order_id)->get();
         $order->order_placed_at = now();
         $order->shipping_id = $request->shipping_id;
+
+        // create all purchases
+        for ($i=0; $i < count($request->purchases); $i++) {
+        }
+
         $order->save();
-        return "Order Created";
+        return response(['data' => $order, 'message' => 'Order placed successfully!', 'status' => true]);
     }
 
     /**

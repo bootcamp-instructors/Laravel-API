@@ -419,19 +419,19 @@
 
                             <li class="list-group-item" style="font-size:1em;margin-left:-40px;">Menu Sections:</li>
                             <li class="list-group-item" style='font-size:0.75em;'>get one random menu section type</li>
-                            <li class="list-group-item">GET <a class="underline" target="_blank" href="https://port-3000-aincbootcampapi-ianrios529550.codeanyapp.com/api/menu/section">/api/menu/section</a></li>
+                            <li class="list-group-item">GET <a class="underline" target="_blank" href="https://port-3000-AincBootcampAPI-ianrios529550.preview.codeanywhere.com/api/menu/section">/api/menu/section</a></li>
                             <li class="list-group-item" style='font-size:0.75em;'>get all menu section types</li>
-                            <li class="list-group-item">GET <a class="underline" target="_blank" href="https://port-3000-aincbootcampapi-ianrios529550.codeanyapp.com/api/menu/sections">/api/menu/sections</a></li>
+                            <li class="list-group-item">GET <a class="underline" target="_blank" href="https://port-3000-AincBootcampAPI-ianrios529550.preview.codeanywhere.com/api/menu/sections">/api/menu/sections</a></li>
                             <br />
                             <li class="list-group-item" style="font-size:1em;margin-left:-40px;">Menu Items:</li>
                             <li class="list-group-item" style='font-size:0.75em;'>get one unique item</li>
-                            <li class="list-group-item">GET <a class="underline" target="_blank" href="https://port-3000-aincbootcampapi-ianrios529550.codeanyapp.com/api/menu/item">/api/menu/item</a></li>
+                            <li class="list-group-item">GET <a class="underline" target="_blank" href="https://port-3000-AincBootcampAPI-ianrios529550.preview.codeanywhere.com/api/menu/item">/api/menu/item</a></li>
                             <li class="list-group-item" style='font-size:0.75em;'>create a collection of unique menu items</li>
-                            <li class="list-group-item">GET <a class="underline" target="_blank" href="https://port-3000-aincbootcampapi-ianrios529550.codeanyapp.com/api/menu/items/42">/api/menu/items/{amount}</a></li>
+                            <li class="list-group-item">GET <a class="underline" target="_blank" href="https://port-3000-AincBootcampAPI-ianrios529550.preview.codeanywhere.com/api/menu/items/42">/api/menu/items/{amount}</a></li>
                             <li class="list-group-item" style='font-size:0.75em;'>get 10 random menu items of a specific type</li>
-                            <li class="list-group-item">GET <a class="underline" target="_blank" href="https://port-3000-aincbootcampapi-ianrios529550.codeanyapp.com/api/menu/type/5">/api/menu/type/{type_id}</a></li>
+                            <li class="list-group-item">GET <a class="underline" target="_blank" href="https://port-3000-AincBootcampAPI-ianrios529550.preview.codeanywhere.com/api/menu/type/5">/api/menu/type/{type_id}</a></li>
                             <li class="list-group-item" style='font-size:0.75em;'>get a specific amount of random menu items of a specific menu type</li>
-                            <li class="list-group-item">GET <a class="underline" target="_blank" href="https://port-3000-aincbootcampapi-ianrios529550.codeanyapp.com/api/menu/type_amount/5/2">/api/menu/type_amount/{type_id}/{amount_id}</a></li>
+                            <li class="list-group-item">GET <a class="underline" target="_blank" href="https://port-3000-AincBootcampAPI-ianrios529550.preview.codeanywhere.com/api/menu/type_amount/5/2">/api/menu/type_amount/{type_id}/{amount_id}</a></li>
                         </ul>
                     </div>
                     <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
@@ -445,31 +445,31 @@
                         <ul class="list-group text-gray-600 dark:text-gray-400" style="list-style-type:none;">
                             <li class="list-group-item" style="font-size:1em;margin-left:-40px;">Path 1:</li>
                             <li class="list-group-item" style='font-size:0.75em;'>get all store products</li>
-                            <li class="list-group-item">GET <a class="underline" target="_blank" href="https://port-3000-aincbootcampapi-ianrios529550.codeanyapp.com/api/store/products">/api/store/products</a></li>
+                            <li class="list-group-item">GET <a class="underline" target="_blank" href="https://port-3000-AincBootcampAPI-ianrios529550.preview.codeanywhere.com/api/store/products">/api/store/products</a></li>
                             <br />
                             <li class="list-group-item" style="font-size:1em;margin-left:-40px;">Path 2:</li>
                             <li class="list-group-item" style='font-size:0.75em;'>get all shipping methods</li>
-                            <li class="list-group-item">GET <a class="underline" target="_blank" href="https://port-3000-aincbootcampapi-ianrios529550.codeanyapp.com/api/store/shippings">/api/store/shippings</a></li>
+                            <li class="list-group-item">GET <a class="underline" target="_blank" href="https://port-3000-AincBootcampAPI-ianrios529550.preview.codeanywhere.com/api/store/shippings">/api/store/shippings</a></li>
                             <br />
                             <li class="list-group-item" style="font-size:1em;margin-left:-40px;">Path 3:</li>
                             <li class="list-group-item" style='font-size:0.75em;'>register a new user</li>
-                            <li class="list-group-item">POST <a class="underline" target="_blank" href="https://port-3000-aincbootcampapi-ianrios529550.codeanyapp.com/api/auth/register">/api/auth/register</a></li>
+                            <li class="list-group-item">POST <a class="underline" target="_blank" href="https://port-3000-AincBootcampAPI-ianrios529550.preview.codeanywhere.com/api/auth/register">/api/auth/register</a></li>
                             <li class="list-group-item" style='font-size:0.75em;'>log in with user data and recieve a user auth token</li>
-                            <li class="list-group-item">POST <a class="underline" target="_blank" href="https://port-3000-aincbootcampapi-ianrios529550.codeanyapp.com/api/auth/login">/api/auth/login</a></li>
+                            <li class="list-group-item">POST <a class="underline" target="_blank" href="https://port-3000-AincBootcampAPI-ianrios529550.preview.codeanywhere.com/api/auth/login">/api/auth/login</a></li>
                             <li class="list-group-item" style='font-size:0.75em;'>get associated user data from user auth token</li>
-                            <li class="list-group-item">GET <a class="underline" target="_blank" href="https://port-3000-aincbootcampapi-ianrios529550.codeanyapp.com/api/auth/user">/api/auth/user</a></li>
+                            <li class="list-group-item">GET <a class="underline" target="_blank" href="https://port-3000-AincBootcampAPI-ianrios529550.preview.codeanywhere.com/api/auth/user">/api/auth/user</a></li>
                             <li class="list-group-item" style='font-size:0.75em;'>log a user out</li>
-                            <li class="list-group-item">GET <a class="underline" target="_blank" href="https://port-3000-aincbootcampapi-ianrios529550.codeanyapp.com/api/auth/logout">/api/auth/logout</a></li>
+                            <li class="list-group-item">GET <a class="underline" target="_blank" href="https://port-3000-AincBootcampAPI-ianrios529550.preview.codeanywhere.com/api/auth/logout">/api/auth/logout</a></li>
                             <br />
                             <li class="list-group-item" style='font-size:1em;margin-left:-40px;'>Final Goal (Requires all paths be complete)</li>
                             <li class="list-group-item" style='font-size:0.75em;'>get all orders from current user</li>
-                            <li class="list-group-item">GET <a class="underline" target="_blank" href="https://port-3000-aincbootcampapi-ianrios529550.codeanyapp.com/api/store/orders">/api/store/orders</a></li>
+                            <li class="list-group-item">GET <a class="underline" target="_blank" href="https://port-3000-AincBootcampAPI-ianrios529550.preview.codeanywhere.com/api/store/orders">/api/store/orders</a></li>
                             <li class="list-group-item" style='font-size:0.75em;'>get current user cart</li>
-                            <li class="list-group-item">GET <a class="underline" target="_blank" href="https://port-3000-aincbootcampapi-ianrios529550.codeanyapp.com/api/store/order/current">/api/store/order/current</a></li>
+                            <li class="list-group-item">GET <a class="underline" target="_blank" href="https://port-3000-AincBootcampAPI-ianrios529550.preview.codeanywhere.com/api/store/order/current">/api/store/order/current</a></li>
                             <li class="list-group-item" style='font-size:0.75em;'>update user cart products</li>
-                            <li class="list-group-item">POST <a class="underline" target="_blank" href="https://port-3000-aincbootcampapi-ianrios529550.codeanyapp.com/api/store/order/update">/api/store/order/update</a></li>
+                            <li class="list-group-item">POST <a class="underline" target="_blank" href="https://port-3000-AincBootcampAPI-ianrios529550.preview.codeanywhere.com/api/store/order/update">/api/store/order/update</a></li>
                             <li class="list-group-item" style='font-size:0.75em;'>place order and get a new empty cart</li>
-                            <li class="list-group-item">GET <a class="underline" target="_blank" href="https://port-3000-aincbootcampapi-ianrios529550.codeanyapp.com/api/store/order/place">/api/store/order/place</a></li>
+                            <li class="list-group-item">GET <a class="underline" target="_blank" href="https://port-3000-AincBootcampAPI-ianrios529550.preview.codeanywhere.com/api/store/order/place">/api/store/order/place</a></li>
                             <br />
 
                             <!--
