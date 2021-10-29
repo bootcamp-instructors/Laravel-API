@@ -119,15 +119,15 @@ class UserController extends Controller
             'email' => 'required|email|max:64|exists:users,email',
             'password' => 'required|string|min:8',
             // add more validation cases if ned
-    // https://laravel.com/docs/8.x/valtion
-       ]);
+            // https://laravel.com/docs/8.x/valtion
+        ]);
 
-    //     if ($validatofails()) {
-    //         return response(['message' => 'Validation errors', 'errors' =>  $validator->errors(), 'status' false], 4;
-    //     }
+        if ($validator->fails()) {
+            return response(['message' => 'Validation errors', 'errors' =>  $validator->errors(), 'status' => false], 422);
+        }
 
 
-       $credentials = $request->only('email', 'password');
+        $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
             $authUser = Auth::user();
@@ -140,6 +140,8 @@ class UserController extends Controller
             // $data['user_data'] = $user;
 
             return response(['data' => $data, 'message' => 'Account Logged In successfully!', 'status' => true]);
+        } else{
+            return response(['message' => 'Validation errors', 'errors' =>  ['password'=> 'invalid password'], 'status' => false], 422);
         }
     }
     /*

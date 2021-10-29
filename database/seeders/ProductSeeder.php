@@ -47,7 +47,8 @@ class ProductSeeder extends Seeder
             'Hardcore Knife',
             'Canoe',
             'Bass Boat Xtreme',
-            'Gun'
+            'Gun',
+            'Dynamite'
         ];
         for ($i = 0; $i < count($tools); $i++) {
             $product = new Product;
